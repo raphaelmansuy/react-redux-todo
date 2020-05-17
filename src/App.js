@@ -9,7 +9,6 @@ import { TodosList } from "./components/todosList"
 
 const rootReducer = combineReducers({ counter, todos })
 
-const store = createStore(rootReducer)
 
 const l = [
   {
@@ -28,6 +27,8 @@ const l = [
     completed: true,
   },
 ]
+
+const store = createStore(rootReducer,{todos:l})
 
 function App() {
   return (
